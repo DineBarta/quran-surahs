@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Surahs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quran Surahs</h1>
+    <ul id="surah-list">
+        <!-- Surahs will be dynamically inserted here -->
+    </ul>
+    <script>
+        const surahs = [
+            { id: 1, name: 'Al-Fatiha', translation: 'The Opening' },
+            { id: 2, name: 'Al-Baqara', translation: 'The Cow' },
+            // Add more Surahs as needed
+        ];
+
+        const surahList = document.getElementById('surah-list');
+
+        surahs.forEach(surah => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${surah.name} - ${surah.translation}`;
+            surahList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
